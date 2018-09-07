@@ -22,7 +22,7 @@ This is experimantal software and it might not be fit for production usage! Use 
 
 Beside standard Python modules:
 
-* [httpsig 1.1.2](https://pypi.python.org/pypi/httpsig/1.1.2)
+* [httpsig 1.2.0](https://pypi.python.org/pypi/httpsig/1.2.0)
 
 ## Usage
 
