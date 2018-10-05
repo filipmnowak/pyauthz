@@ -57,8 +57,8 @@ export PYAUTHZ_API_KEYS='{"someid1": "somekey1", "someid2": "somekey2", "someid3
 >>> hs = z(req, keyid_and_key, 120)
 >>> signed_headers = hs.sign_request()
 >>> signed_headers
-{'date': 'Fri Oct  5 21:39:45 CEST 2018', 'host': 'example.com', 'signature-ttl': '120', 
-'pyauthz-salt': 'SuUpmh78GxP/LctVk5HjsUfTp8LB4B6p+DIW8imSPXCPxSWsiW62nL+8DokvptG79t8VhJwxmRKSnetWPwpP7Q==', 
+{'date': 'Fri Oct  5 21:39:45 CEST 2018', 'host': 'example.com', 'signature-ttl': '120', 'pyauthz-salt': 
+'SuUpmh78GxP/LctVk5HjsUfTp8LB4B6p+DIW8imSPXCPxSWsiW62nL+8DokvptG79t8VhJwxmRKSnetWPwpP7Q==', 
 'digest': 'sha-256=wphcW6b30qVedo+SSQygk4jpW8TMy5/fEbFfTUL5PnM=', 'authorization': 'Signature 
 keyId="someid",algorithm="hmac-sha256",signature="Y9q4PlLX9wXEndz8Ggn13aiqq23Klk89hF0wbiWLHQc=",
 headers="(request-target) date host signature-ttl pyauthz-salt digest"'}
