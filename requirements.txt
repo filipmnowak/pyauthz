@@ -1,1 +1,1 @@
-httpsig==1.1.2
+httpsig==1.2.0
