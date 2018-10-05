@@ -47,7 +47,7 @@ export PYAUTHZ_API_KEYS='{"someid1": "somekey1", "someid2": "somekey2", "someid3
 
 ```python
 >>> keyid_and_key = ('someid', 'somekey')
->>> req = {'headers': {"Date": "Thu, 12 Jan 2017 11:10:00 GMT", "Host": 
+>>> req = {'headers': {"Date": "Fri Oct  5 21:39:45 CEST 2018", "Host": 
 ... "example.com"},'body': '{"z": 1, "a": 2 }', 'path': '/some/endpoint', 'method': 'GET'}
 ```
 
@@ -57,12 +57,11 @@ export PYAUTHZ_API_KEYS='{"someid1": "somekey1", "someid2": "somekey2", "someid3
 >>> hs = z(req, keyid_and_key, 120)
 >>> signed_headers = hs.sign_request()
 >>> signed_headers
-{'host': 'example.com', 'date': 'Thu, 12 Jan 2020 11:10:00 GMT',
-'digest': 'sha-256=wphcW6b30qVedo+SSQygk4jpW8TMy5/fEbFfTUL5PnM=',
-'authorization': 'Signatureheaders="(request-target) date host digest signature-ttl pyautz-salt",
-keyId="someid", signature="Zia0X1kLfaYD9GEWXXrAvkWGkZEW/B6eqQN2sktwS0s=", algorithm="hmac-sha256"',
-'pyautz-salt': 'BL8c2oxb4OsnUIBm6Y0I9aYU9D2xv04rh3c1lX3mPmhaKHLUyBMMnWJ2XV6ZieFhf/EkW8A07QK2Dg9g+zkAdQ==',
-'signature-ttl': 120}
+{'date': 'Fri Oct  5 21:39:45 CEST 2018', 'host': 'example.com', 'signature-ttl': '120', 
+'pyauthz-salt': 'SuUpmh78GxP/LctVk5HjsUfTp8LB4B6p+DIW8imSPXCPxSWsiW62nL+8DokvptG79t8VhJwxmRKSnetWPwpP7Q==', 
+'digest': 'sha-256=wphcW6b30qVedo+SSQygk4jpW8TMy5/fEbFfTUL5PnM=', 'authorization': 'Signature 
+keyId="someid",algorithm="hmac-sha256",signature="Y9q4PlLX9wXEndz8Ggn13aiqq23Klk89hF0wbiWLHQc=",
+headers="(request-target) date host signature-ttl pyauthz-salt digest"'}
 ```
 
 * to verify, similar steps (please note order of the keys in the body of the request

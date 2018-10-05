@@ -1,15 +1,15 @@
 import logging
-import httpsig
 import hashlib
 import base64
 import json
 import re
 import os
+import httpsig
 import email.utils as eutils
-from calendar import timegm as tgm
 from time import time
 from copy import deepcopy
 from json.decoder import JSONDecodeError
+from calendar import timegm as tgm
 from httpsig.utils import CaseInsensitiveDict as cidict
 
 
@@ -116,7 +116,7 @@ class HTTPSigAuthZ:
     def sign_request(self):
         # adding extra headers
         self.http_request['headers']['signature-ttl'] = str(self.signature_ttl)
-        self.http_request['headers']['pyautz-salt'] = self.gen_salt()
+        self.http_request['headers']['pyauthz-salt'] = self.gen_salt()
         digest_header_value = 'sha-256=' + self.body_digest()
         self.http_request['headers']['digest'] = digest_header_value
         self.request_target = ['(request-target)']
