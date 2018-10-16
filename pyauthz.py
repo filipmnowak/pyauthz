@@ -31,12 +31,14 @@ class HTTPSigAuthZ:
                 verification, key identified by str will be used.
                 or
                 be None. None is applicable in case of request verification and effects in
-                dynamic key lookup in the PYAUTHZ_API_KEYS, becased on the key id mentioned
+                dynamic key lookup in the PYAUTHZ_API_KEYS, based on the key id mentioned
                 in the authorization header.
+
             signature_ttl : int
                 Time to live / time of validity of the request signature in seconds.
                 Set by the client; causes 'signature_ttl' header to be added to the request.
                 Default: 1, maximum accepted value: 86400 (one day / 24h).
+
             logger : logging.Logger, optional
                 Logger object. Will be autoinitialized in case if not given by the caller.'''
 
@@ -111,7 +113,6 @@ class HTTPSigAuthZ:
         else:
             self.log.error('authorization failed! no signature-ttl header in the request.')
             return False
-        return False
 
     def sign_request(self):
         # adding extra headers
