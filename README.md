@@ -1,5 +1,3 @@
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/filipmnowak/pyauthz.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/filipmnowak/pyauthz/alerts/) [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/filipmnowak/pyauthz.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/filipmnowak/pyauthz/context:python)
-
 # pyauthz 
 
 Verify (authorize) or sign request using [httpsig](https://github.com/ahknight/httpsig/) module; based on:
