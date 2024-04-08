@@ -107,8 +107,3 @@ Please make sure your code is compliant with [PEP8 standard](https://www.python.
 * E402 - in tests, module-level imports not being placed at the top of the source file are fine.
 * E501 - maximum line length is set to 92 characters (more practical and still tidy / readable)
 * E265 - it is OK to comment code without adding space after `#`
-
-## License
-
-[GPLv3](https://www.gnu.org/licenses/gpl-3.0.txt); see [LICENSE.txt](LICENSE.txt)  
-Copyright © 2018 Filip M. Nowak
